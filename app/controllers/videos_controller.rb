@@ -31,7 +31,7 @@ class VideosController < ApplicationController
 
       render json: {token: upload_info[:token], url: upload_info[:url]}
     else
-      render json: {error_type: 'Not authorized.'}
+      render json: {error_type: 'Not authorized.', status: :unprocessable_entity}
     end
   end
 end
