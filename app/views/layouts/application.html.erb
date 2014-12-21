@@ -16,6 +16,11 @@
     <ul class="nav navbar-nav">
       <li><%= link_to 'Videos', root_path %></li>
       <li><%= link_to 'Add Video', new_video_path %></li>
+      <li>
+        <% if current_user %>
+          Token: <%= current_user.token %>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
